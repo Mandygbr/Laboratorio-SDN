@@ -31,7 +31,9 @@ while i < len(lista):
 url2 = "https://api.meraki.com/api/v1/organizations/681155/devices?productTypes%5B%5D=wireless"
 url3 = "https://api.meraki.com/api/v1/organizations/681155/devices?productTypes%5B%5D=appliance"
 disp_wireless=requests.get(url2, headers=headers, data = payload)
+disp_wireless.raise_for_status()
 disp_appliance=requests.get(url3, headers=headers, data = payload)
+disp_appliance.raise_for_status()
 dev_wir=disp_wireless.json()
 dev_appli=disp_appliance.json()
 pprint.pprint(dev_wir)
