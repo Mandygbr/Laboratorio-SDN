@@ -14,6 +14,7 @@ headers = {
 }
 
 lista = requests.request('GET', url, headers=headers, data = payload)
+lista.raise_for_status()
 lista = lista.json()
 while i < len(lista):
     organizaciones.append(lista[i]['name'])
