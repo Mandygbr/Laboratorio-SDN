@@ -1,3 +1,4 @@
+# -*- coding: cp1252 -*-
 import requests
 import pprint
 import json
@@ -47,3 +48,14 @@ with lista_dispositivos:
          if (dev_appli[j]['productType'] == "apppliance"):
             writer.writerows(dev_appli[j])
          j = j+1
+
+
+
+
+
+
+
+
+
+
+    
